@@ -26,7 +26,7 @@ node{
      stage("Deploy To Kuberates Cluster"){
        kubernetesDeploy(
          configs: 'springBootMongo.yml', 
-         kubeconfigId: 'KUBERNATES_CONFIG',
+         kubeconfigId: 'KUBERNATES_CLUSTER_CONFIG',
          enableConfigSubstitution: true
         )
      }
