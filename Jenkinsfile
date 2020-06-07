@@ -17,7 +17,7 @@ node{
     }
     
     stage('Push Docker Image'){
-        withCredentials([file(credentialsId: 'DOCKER_HUB_CREDENTIALSS', variable: 'DOCKER_HUB_CREDENTIALSS')])  {
+        withCredentials([string(credentialsId: 'DOCKER_HUB_CREDENTIALS', variable: 'DOCKER_HUB_CREDENTIALS')])   {
           sh "docker login -u shruthishinde -p ${DOCKER_HUB_CREDENTIALSS}"
         }
         sh 'docker push shruthishinde/spring-boot-mongo'
