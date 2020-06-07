@@ -20,7 +20,7 @@ node{
         withCredentials([file(credentialsId: '', variable: 'DOCKER_HUB_CREDENTIALSS')])  {
           sh "docker login -u shruthishinde -p ${DOCKER_HUB_CREDENTIALSS}"
         }
-        sh 'docker push dockerhandson/spring-boot-mongo'
+        sh 'docker push shruthishinde/spring-boot-mongo'
      }
      
      stage("Deploy To Kuberates Cluster"){
